@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pixel-perfect Diagram PPT"
+  short_description: "按原图像素级复刻科研机制图、流程图、信息图为可编辑 PPT。"
+  default_prompt: "Use $pixel-perfect-diagram-ppt to recreate this reference diagram as a high-fidelity editable PowerPoint slide: inspect the source crop before each edit, use source-style transparent PNGs for complex modules, keep readable labels/tables/simple lines editable, and verify with zoomed source-vs-output previews."
+
+policy:
+  allow_implicit_invocation: true
