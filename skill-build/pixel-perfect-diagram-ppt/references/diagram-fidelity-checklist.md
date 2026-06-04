@@ -28,6 +28,7 @@ Use this checklist before handing off an editable PPTX diagram reconstruction.
 - Chemical formulas render correctly, using rich text or Unicode forms such as `NH₄⁺`, `NO₃⁻`, `NO₂⁻`, `PO₄³⁻`, and `N₂`.
 - Parenthetical subtitles have source-like smaller size and spacing.
 - Labels do not collide with separator lines, arrows, icons, or frame borders unless the source does.
+- Dense regions have been checked for collisions among text, chemical formulas, PNG modules, arrows, arrowheads, dashed boxes, legends, and process lines. Any source gap around these objects is preserved instead of being guessed.
 
 ## PNG Modules And Icons
 
@@ -43,6 +44,7 @@ Use this checklist before handing off an editable PPTX diagram reconstruction.
 
 - Arrow heads and shafts match source color, thickness, head size, and geometry.
 - Arrow heads point to the same target as the source: word gap, label center, particle cluster, box edge, or icon body.
+- Arrow shafts and heads do not pass through readable text or complex modules unless the source shows that exact overlap.
 - A single relationship arrow has only one arrow head.
 - Curved arrows preserve source curvature and continuity.
 - Solid lines remain solid; dashed lines remain dashed.

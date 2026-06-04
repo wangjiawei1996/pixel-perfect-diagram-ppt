@@ -49,11 +49,13 @@ Inspect the original source crop before every local edit. Do not rely only on th
 - A repaired PNG must be complete: closed edge, one outer border, no white holes, no patch blocks, no duplicated outline, no leftover internal/external line fragments, and no unexpected shadow.
 - Keep PNG canvas and PPT placement synchronized. If transparent margins change, update x/y/w/h in the PPT generator.
 - Text must stay inside its frame or source region. If it exceeds a box, reduce font size or adjust the text box.
+- Text, icons, biological modules, arrows, arrowheads, dashed boxes, legends, and process lines must not overlap unless the source image visibly overlaps them. Before handoff, audit every dense region for object collisions and restore the source gaps, especially around chemical formulas, curved arrows, PNG modules, and legend labels.
 - If the source keeps a label on one line, prevent PowerPoint wrapping.
 - Match text color and weight. Scientific legends often encode meaning through green/red/blue/purple/black labels.
 - Use Chinese-capable fonts such as `微软雅黑` / `Microsoft YaHei` when the source uses Chinese labels.
 - Use real subscript/superscript when stable. If PowerPoint/preview baseline drifts, use Unicode formula glyphs such as `NH₄⁺`, `NO₃⁻`, `NO₂⁻`, `PO₄³⁻`, and `N₂`.
 - Arrow meaning is strict. The arrow head must land on the same visual target as the source: word center, word gap, icon edge, particle cluster, box edge, or label center.
+- Arrow shafts and heads must not cross readable labels or complex module bodies unless the source does. If a line relation approaches text, match the source gap or route the curve around the label.
 - One relationship arrow has one arrow head. Do not append a second arrow-headed segment to extend a curve.
 - Curved arrows need source-like curvature. Do not replace curved solid arrows with broken, dotted, or visibly segmented substitutes.
 - Preserve line topology. If the source line is continuous, keep it continuous; if the source line has a text gap, preserve the gap.
